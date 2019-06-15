@@ -1,0 +1,18 @@
+<!--pages/music/index.wxml-->
+<view class='music'>
+  <image src='/images/music.png'></image>
+  <view class='musickeys'>
+    <view class='information'>
+
+      <view class='music_pto'>
+        <text>{{title}}</text>
+      </view>
+
+      <view class='music_text' >
+        <text decode="nbsp">
+{{content}}
+  </text>
+      </view>
+    </view>
+  </view>
+</view>

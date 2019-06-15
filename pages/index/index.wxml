@@ -1,0 +1,111 @@
+<!--pages/index/index.wxml-->
+<view class='Theglobalbackground'>
+  <view class='time_information'>
+    <view class='thecurrenttime'>
+      <text>当前时间：{{Y}}-{{M}}-{{D}}</text>
+      <text>最终缔结人：{{user_name}}</text>
+    </view>
+
+    <view class='information'>
+      <view class='guitarinformation '>
+        <text decode="nbsp">校&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 区：</text>
+        <view bindtap="showPicker_campusName" class='xrgx'>
+          {{campusNameList[0][campusNameListIndex]}}</view>
+        <picker isShowPicker="{{isShow_campusName}}" bindsure="sureCallBack_campusName" bindcancle="cancleCallBack_campusName" scrollType="normal" listData="{{campusNameList}}" chooseItemTextStyle="font-size:20rpx" titleText="校区"></picker>
+
+      </view>
+
+      <view class='guitarinformation jiafeir'>
+        <text decode="nbsp">缴&nbsp; 费&nbsp;人：</text>
+        <input type="text" placeholder='输入姓名后请选择学员情况' bindinput='inputStudentName' value='{{jiaofeiren}}'></input>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for-items="{{items}}" wx:key="{{items}}">
+            <radio value="{{item.value}}" checked="{{qkong?'':item.checked}}" />{{item.value}}
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class='goods'>
+        <text decode="nbsp">商&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 品：</text>
+        <view bindtap="showPicker_goodsTypeList" class="picker">
+          <image class="picker_img" src='/images/xia.png'></image>{{goodsType[0][goodsTypeIndex]}}</view>
+        <picker isShowPicker="{{isShow_goodsType}}" bindsure="sureCallBack_goodsType" bindcancle="cancleCallBack_goodsType" scrollType="normal" listData="{{goodsType}}" chooseItemTextStyle="font-size:20rpx" titleText="商品"></picker>
+
+        <view bindtap="showPicker_goodsList" class="picker">
+        
+          <image class="picker_img" src='/images/xia.png'></image>{{goodsList[0][goodsListIndex]}}</view>
+        <picker isShowPicker="{{isShow_goods}}" bindsure="sureCallBack_goods" bindcancle="cancleCallBack_goods" scrollType="normal" listData="{{goodsList}}" chooseItemTextStyle="font-size:20rpx" titleText="商品"></picker>
+
+
+
+      </view>
+
+      <!-- <view class='guitarinformation' wx:if="{{selectType}}"> -->
+        <view class='num_input' wx:if="{{selectType}}">
+        <text decode="nbsp">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 量：</text>
+        <!-- <input type="number" placeholder='' disabled="{{isDelivery=='未交付'}}" bindinput='numberInput' value='{{num}}'></input>
+        <checkbox-group wx:if="{{selectType}}"> -->
+                <input class="num_picker" type="number" placeholder='' disabled="{{isDelivery=='未交付'}}" bindinput='numberInput' value='{{num}}'></input>
+        <checkbox-group wx:if="{{selectType}}">
+          <text decode="nbsp" class='checkboxx'>未交付: &nbsp;</text>
+          <checkbox class='checkbox' bindtap='delivery' disabled="{{deliverys}}" checked="{{isDelivery=='未交付'?true:false}}"></checkbox>
+        </checkbox-group>
+      </view>
+
+      <view class='thetotalamountof '>
+        <text decode="nbsp">销售金额：</text>
+        <view class='thetotalamountof_text'>{{sellPrice}} 元</view>
+      </view>
+
+      <view class='pay' wx:if="{{selectType}}">
+        <text decode="nbsp">预收金额：</text>
+        <view class='prePrice'>{{prePrice}}</view>
+        <text>元</text>
+      </view>
+
+      <view class='pay'>
+        <text decode="nbsp">微信支付：</text>
+        <input type="digit" placeholder='' bindinput='weichatPayInput' value='{{weichatPay}}'></input>
+        <text>元</text>
+      </view>
+      <view class='pay'>
+        <text decode="nbsp">口碑支付：</text>
+        <input type="digit" placeholder='' bindinput='aliPayInput' value='{{aliPay}}'></input>
+        <text>元</text>
+      </view>
+      <view class='pay'>
+        <text decode="nbsp">现金支付：</text>
+        <input type="digit" placeholder='' bindinput='cashPayInput' value='{{cashPay}}'></input>
+        <text>元</text>
+      </view>
+      <view class='pay'>
+        <text decode="nbsp">微店支付：</text>
+        <input type="digit" placeholder='' bindinput='weidianPayInput' value='{{weidianPay}}'></input>
+        <text>元</text>
+      </view>
+
+      <view class='pay'>
+        <text decode="nbsp">押金抵扣：</text>
+        <input type="digit" placeholder='' bindinput='pledgeDeductionInput' value='{{pledgeDeduction}}'></input>
+        <text>元</text>
+      </view>
+
+      <view class='pay'>
+        <text decode="nbsp">合作校前台支付：</text>
+        <input class='cooperation' type="digit" placeholder='' bindinput='campusPayInput' value='{{campusPay}}'></input>
+        <text>元</text>
+      </view>
+
+      <view class='guitarinformation '>
+        <text decode="nbsp">备 &nbsp;&nbsp; &nbsp; 注：</text>
+        <input type="text" placeholder='' bindinput='commentInput'  value='{{comment}}'></input>
+      </view>
+    </view>
+  </view>
+
+  <view class='submit'>
+    <button bindtap='submit'>提交</button>
+  </view>
+
+</view>

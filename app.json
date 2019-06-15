@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/thedatacenter/index",
+    "pages/personalcenter/index",
+    "pages/detailsonthereceipt/index",
+    "pages/submittherecord/index",
+    "pages/advancerecord/index",
+    "pages/music/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5D5166",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#63576c",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/Home.png",
+        "selectedIconPath": "images/Home_Click.png"
+      },
+      {
+        "pagePath": "pages/thedatacenter/index",
+        "text": "数据中心",
+        "iconPath": "images/thedatacenter.png",
+        "selectedIconPath": "images/thedatacenter_Click.png"
+      },
+      {
+        "pagePath": "pages/personalcenter/index",
+        "text": "个人中心",
+        "iconPath": "images/personalcenter.png",
+        "selectedIconPath": "images/personalcenter_Click.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,102 @@
+/* pages/detailsonthereceipt/index.wxss */
+.time_information {
+  background: #fff;
+  height: auto;
+  border-radius: 15rpx;
+}
+
+.ul .li {
+  width: 100%;
+  line-height: 70rpx;
+  height: 70rpx;
+  border-bottom: 3rpx solid #efeff7;
+  position: relative;
+}
+
+.details {
+  overflow: hidden;
+  width: 95%;
+  margin: 0 auto;
+  font-size: 26rpx;
+  color: #969696;
+}
+.details text:nth-of-type(1){
+  float: left
+}
+.details text:nth-of-type(2){
+  float: right;
+  text-align: right;
+}
+.red{
+  color: red;
+}
+.ul .li:nth-last-of-type(1){
+border: none;
+}
+
+.delivery{
+  width: 300rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #63576c;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  top: 50rpx;
+}
+
+.alreadydelivered{
+  width: 300rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #DBD7D7;
+  margin: 0 auto;
+  text-align: center;
+  color: #A9A8A8;
+  position: relative;
+  top: 50rpx;
+}
+button {
+  background-color: #fff;
+}
+button::after {
+  border: none;
+}
+.time{
+  margin:0 auto;
+width:94%;
+font-size: 25rpx;
+position: relative;
+  top: 30rpx;
+  text-align: right;
+  color: #ccc;
+}
+.textt{
+  width: 90%;
+  height: 50rpx;
+  /* background: red; */
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.input_placeholder{
+ width:75%;
+height:45rpx;
+padding:0rpx 20rpx 0rpx 0rpx;
+position:absolute;
+right:10rpx;
+top:8rpx;
+text-align: right;
+}
+.input_placeholder1{
+ width:75%;
+height:45rpx;
+border:1rpx solid red;
+padding:0rpx 20rpx 0rpx 0rpx;
+position:absolute;
+right:10rpx;
+top:8rpx;
+text-align: right;
+}
+.f20{font-size: 20rpx;}

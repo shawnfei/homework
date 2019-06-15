@@ -1,0 +1,45 @@
+<!--pages/personalcenter/index.wxml-->
+
+<view class='Theglobalbackground'>
+  <view class='image'>
+    <image src='/images/personalcenter_top.png'></image>
+  </view>
+
+  <view class='time_information'>
+    <view class='portrait'>
+      <view class='portrait_image'>
+        <image src='/images/touxiang.png'></image>
+      </view>
+      <view class='portrait_text'>
+        <text> 最终缔结人：{{userName}} \n</text>
+        <text decode="nbsp">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：{{tel}}</text>
+      </view>
+    </view>
+
+    <view>
+
+      <view class='ul'>
+        <navigator url='/pages/submittherecord/index'>
+          <view class="li">
+            <image src='/images/theorder.png'></image>
+            <text>提交记录管理</text>
+          </view>
+        </navigator>
+
+
+        <navigator url='/pages/music/index'>
+          <view class="li">
+            <image src='/images/about.png'></image>
+            <text>关于音乐钥匙</text>
+          </view>
+        </navigator>
+        <view>
+          <view class="li" bindtap='outLogin'>
+            <image src='/images/portrait.png'></image>
+            <text>退出</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

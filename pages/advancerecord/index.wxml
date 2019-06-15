@@ -1,0 +1,116 @@
+<!--pages/advancerecord/index.wxml-->
+<view class='Theglobalbackground'>
+  <view class='time_information'>
+    <view class='ul'>
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">校&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 区：</text>
+          <text>A校区</text>
+        </view>
+      </view>
+
+
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">缴&nbsp; 款&nbsp;人：</text>
+          <text>A校区</text>
+        </view>
+      </view>
+
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">商&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 品：</text>
+          <text>A校区</text>
+        </view>
+      </view>
+
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 量：</text>
+          <text>A校区</text>
+        </view>
+      </view>
+
+
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">缴费金额：</text>
+          <text class='red'>1000元</text>
+        </view>
+      </view>
+
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">预收金额：</text>
+          <text class='red'>1000元</text>
+        </view>
+      </view>
+
+
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">微信支付：</text>
+          <text class='red'>1000元</text>
+        </view>
+      </view>
+
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">口碑支付：</text>
+          <text class='red'>1000元</text>
+        </view>
+      </view>
+
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">现金支付：</text>
+          <text class='red'>1000元</text>
+        </view>
+      </view>
+
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">微店支付：</text>
+          <text class='red'>1000元</text>
+        </view>
+      </view>
+
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">押金抵扣：</text>
+          <text class='red'>1000元</text>
+        </view>
+      </view>
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">合作校前台支付：</text>
+          <text class='red'>1000元</text>
+        </view>
+      </view>
+      <view class='li'>
+        <view class='details'>
+          <text decode="nbsp">备 &nbsp;&nbsp; &nbsp;&nbsp; 注：</text>
+          <text>无</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class='time'>
+    <text>*</text>
+    <text>如有数据变动请直接联系管理员修改</text>
+  </view>
+
+  <!--确定交付-->
+  <view>
+    <button class='delivery'>确定交付</button>
+  </view>
+
+
+  <!--已交付-->
+  <!-- <view>
+      <button class='alreadydelivered'>已交付</button>
+    </view> -->
+
+
+</view>

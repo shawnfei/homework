@@ -1,0 +1,95 @@
+<!--pages/thedatacenter/index.wxml-->
+<view class='Theglobalbackground'>
+
+  <view class='time_information'>
+    <view class="swiper-tab">
+      <image src='/images/summary.png'></image>
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="ysjilu">预收记录</view>
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="xsjilu">销售记录</view>
+    </view>
+    <view class='search'>
+      <view>
+        <view class="page">
+          <!-- 时间段 -->
+          <view class="picker_group">
+            <view class='details'>
+              <text>开始时间</text>
+              <picker mode="date" value="{{pickerTimeStart1}}"bindchange="changeTimeStart">
+                <view class="picker">
+                  {{pickerTimeStart1}}
+                </view>
+              </picker>
+            </view>
+
+            <view class='details'>
+              <text>结束时间</text>
+              <picker mode="date" value="{{pickerTimeStart2}}" bindchange="changeTimeEnd">
+                <view class="picker">
+                  {{pickerTimeStart2}}
+                </view>
+              </picker>
+            </view>
+
+          </view>
+        </view>
+
+      </view>
+      <view>
+        <image src='/images/search.png'></image>
+        <input type='text' class='search_input' placeholder='请输入校区/商品/缴款人/价格' bindinput='searchInput'></input>
+        <view class='search_button' bindtap='filtrate'>筛选</view>
+      </view>
+    </view>
+
+    <view class='total'>
+      <view>
+        <text>合计</text>
+      </view>
+      <view>
+        <text>￥{{moneyTotal?moneyTotal:0}}</text>
+      </view>
+    </view>
+
+    <view class="top">
+      <view class='ul taitou'>
+        <view class='li'>时间</view>
+        <view class='li'>校区</view>
+        <view class='li'>缴款人</view>
+        <view class='li'>商品</view>
+        <view class='li'>金额</view>
+        <view class='li'>详情</view>
+      </view>
+      <!--内容-->
+      <scroll-view scroll-y='{{findLen>12?"true":"false"}}' style="height:600rpx" bindscrolltolower="upper" class='searchcontent' wx:if="{{findLen>0}}">
+        <view class='ul' wx:for="{{message}}" wx:key="{{message}}">
+          <view class='li'>
+            <view class='ul'>
+              <view class='li'>{{item.create_time}}</view>
+              <view class='li'>{{item.campus_name}}</view>
+              <view class='li'>{{item.student_name}}</view>
+              <view class='li'>{{item.goods_name}}</view>
+              <view class='li'>￥{{item.sell_price!=0?item.sell_price:item.ys_price}}</view>
+              <view class='li an'>
+                <navigator url='/pages/detailsonthereceipt/index?data={{messageParam}}&index={{index}}&type=2'>
+                  <text>查看</text>
+                </navigator>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </scroll-view>
+
+
+
+      <!--暂无记录-->
+      <view class='norecord' wx:else>
+        <image src='/images/wujilu.png'></image>
+      </view>
+    </view>
+  </view>
+
+
+
+
+</view>

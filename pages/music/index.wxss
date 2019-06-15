@@ -1,0 +1,36 @@
+/* pages/music/index.wxss */
+.music{
+width: 100%;
+min-height: 100vh;
+}
+.music image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.musickeys{
+  width: 100%;
+  z-index: 9;
+  position: absolute;
+}
+.information{
+  width: 95%;
+  min-height: 90vh;
+  background: rgba(255,255,255,0.8);
+  margin: 0 auto;
+  border-radius: 15rpx;
+  position: relative;
+  top: 50rpx;
+  font-size: 30rpx;
+}
+.music_pto{
+  width: 100%;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 3rpx solid #fff;
+}
+.music_text{
+  width: 95%;
+  margin: 0 auto;
+}

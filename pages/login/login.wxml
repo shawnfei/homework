@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+<view>
+  <image class='login_background' src='/images/login_background.png'></image>
+  <view class='login'>
+    <view class='login_logo'>
+      <image src='/images/login_logo.png'></image>
+      <view></view>
+      <text decode="nbsp"> &nbsp;为教销一体服务的 \n 个人销售管理系统</text>
+    </view>
+    <view class='input'>
+      <!-- <view class='input_1'>
+        <image src='/images/login_tou.png'></image>
+        <input type='text' placeholder='请输入姓名' bindinput='nameInput'></input>
+      </view> -->
+
+      <view class='input_1'>
+        <image src='/images/account.png'></image>
+        <input type='number' placeholder='请输入手机号' bindinput='telInput'></input>
+      </view>
+      <view class='input_1'>
+        <image src='/images/password.png'></image>
+        <input type='password' placeholder='请输入密码' bindinput='passWordInput'></input>
+      </view>
+    
+        <button bindtap='intoButton'>登录系统</button>
+
+    </view>
+  </view>
+</view>
